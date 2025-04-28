@@ -1,0 +1,102 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  animation-name: nav;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  box-shadow: 10px 10px 10px #0000001c;
+  border-radius: 10%;
+  flex-wrap: wrap;
+}
+
+@keyframes nav {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.topnav {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links li {
+  display: inline;
+}
+
+.opperation {
+  text-decoration: none;
+  padding: 7px 16px;
+  border: 1px solid;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.opperation:hover {
+  background-color: rgba(104, 104, 104, 0.11);
+}
+
+.icon {
+  display: none;
+  color: white;
+  font-size: 24px;
+  padding: 14px;
+}
+
+@media screen and (max-width: 700px) {
+  .topnav {
+    z-index: 3;
+    background-color: #333;
+    border-radius: 30%;
+    flex-direction: column-reverse;
+  }
+  .links {
+    z-index: 3;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    display: none;
+    height: 100px;
+    width: 200px;
+  }
+
+  .topnav.responsive .links {
+    display: flex;
+  }
+
+  .icon {
+    margin-bottom: 20%;
+    display: block;
+  }
+
+  .opperation {
+    color: white;
+  }
+}
+
+.up {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_asort{
+  background-color: transparent;
+  border: none;
+  margin-left: 5%;
+}

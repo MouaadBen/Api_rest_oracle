@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../asset/CSS/factures.css">
+    <link rel="icon" href="../images/Logo-XPERIS-Services.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Factures</title>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <a href="../index.html"><img width="150px" height="80px" src="../images/Logo-XPERIS-Services.jpg"
+                    alt=""></a>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <ul class="links">
+                <li><a class="opperation" href="#">Gestion des factures</a></li>
+                <li><a class="opperation" href="clients.html">Gestion des clients</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="navbar()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+    <div class="container mt-3">
+        <div class="up">
+            <h2>Liste des Factures</h2>
+
+            <div class="d-flex mb-3 align-items-center">
+                <input type="text" id="searchInput" class="form-control" placeholder="Rechercher une facture...">
+                <button id="searchBtn" class="btn btn-light ms-2 p-2" style="border: none;">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                            d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-hover" id="invoicesTable">
+
+                <thead>
+                    <tr>
+                        <th>Transaction ID
+                            <button id="sortIdBtn" class="button_asort" aria-label="Sort by Transaction Id">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.42 122.88" width="16"
+                                    height="16" role="img">
+                                    <g>
+                                        <path class="st0"
+                                            d="M49.71,0L0,51.7c33.14,0,66.28,0,99.42,0L49.71,0z M49.71,122.88L0,71.18c33.14,0,66.28,0,99.42,0L49.71,122.88z" />
+                                    </g>
+                                </svg>
+                            </button>
+                        </th>
+                        <th>Transaction Number</th>
+                        <th>
+                            Transaction Date
+                            <button id="sortDateBtn" class="button_asort" aria-label="Sort by Transaction Date">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.42 122.88" width="16"
+                                    height="16" role="img">
+                                    <g>
+                                        <path class="st0"
+                                            d="M49.71,0L0,51.7c33.14,0,66.28,0,99.42,0L49.71,0z M49.71,122.88L0,71.18c33.14,0,66.28,0,99.42,0L49.71,122.88z" />
+                                    </g>
+                                </svg>
+                            </button>
+                        </th>
+                        <th>Due Date</th>
+                        <th>Transaction Type</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="pagination" class="d-flex justify-content-center mt-3 my-3"></div>
+
+        <script src="../asset/JS/script.js"></script>
+        <script src="../asset/JS/app.js"></script>
+</body>
+
+</html>
